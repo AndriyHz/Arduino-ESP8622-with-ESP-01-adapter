@@ -9,7 +9,7 @@ MLX90615 mlx90615(DEVICE_ADDR, &i2c);
 
 //WiFi
 // replace with your channel's thingspeak API key
-String apiKey = "K93JGGZ3LTFGQSFO";
+String apiKey = "*****************";
 
 // connect 2 to TX of Serial USB
 // connect 3 to RX of serial USB
@@ -18,15 +18,15 @@ SoftwareSerial ser(6,7); // RX, TX
 
 void setup()
 {
-  //Serial.println("Setup...");
   Serial.begin(9600); 
   // enable software serial
   ser.begin(9600);
 
-  //mlx90615.writeEEPROM(Default_Emissivity); //write data into EEPROM when you need to adjust emissivity.
-  //mlx90615.readEEPROM(); //read EEPROM data to check whether it's a default one.
-//WiFi
-// reset ESP8266
+ //mlx90615.writeEEPROM(Default_Emissivity); //write data into EEPROM when you need to adjust emissivity.
+ //mlx90615.readEEPROM(); //read EEPROM data to check whether it's a default one.
+
+  //WiFi
+ // reset ESP8266
   ser.println("AT+RST");
 }
 
